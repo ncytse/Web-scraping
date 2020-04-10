@@ -23,10 +23,10 @@ for i in range(len(data_rows)):  # for each table row
 
     # for each table data element from each table row
     for td in data_rows[i].findAll('td'):        
-        # get the text content and append to the player_row 
+        # get the text content and append to the country_row 
         country_row.append(td.getText())        
 
-    # then append each pick/player to the player_data matrix
+    # then append each country to the country matrix
     country_data.append(country_row)
 
 df = pd.DataFrame(country_data, columns=column_headers)
